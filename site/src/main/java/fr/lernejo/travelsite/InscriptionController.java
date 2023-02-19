@@ -9,15 +9,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-public class InscriptionController implements InscriptionInterface{
+public class InscriptionController{
+
+    //private final ArrayList<Inscription> users = new ArrayList<>();
+    private final Inscription user = new Inscription("test@gmail.com", "test", "France", WeatherExpectation.WARMER, 5);
 
     @PostMapping("/api/inscription")
     public void add(@RequestBody Inscription inscription){
-        users.add(inscription);
+        //users.add(inscription);
     }
 
     @GetMapping("/api/inscription")
-    public List<Inscription> getUsers(){
-        return users;
+    public Inscription getUsers(){
+        return user;
     }
 }

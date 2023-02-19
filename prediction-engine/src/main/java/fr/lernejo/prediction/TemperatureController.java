@@ -6,11 +6,16 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @RestController
-public class TemperatureController implements TemperatureInterface {
+public class TemperatureController{
+
+    //private final ArrayList<Temperature> lastDaysTemperature = new ArrayList<>();
+    private final Temperature temperature = new Temperature("France", "2021-12-16",7.52);
+
 
     @GetMapping("/api/temperature")
-    public ArrayList<Temperature> getLastDaysTemperature(){
-        return lastDaysTemperature;
+    public Temperature getLastDaysTemperature(){
+        return temperature;
     }
 }
