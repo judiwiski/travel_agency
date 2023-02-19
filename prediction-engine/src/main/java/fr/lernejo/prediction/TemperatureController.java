@@ -10,13 +10,12 @@ import java.util.List;
 public class TemperatureController {
 
 
-    private final ArrayList<Temperature> lastDaysTemperature = new ArrayList<>();
+    //private final ArrayList<Temperature> lastDaysTemperature = new ArrayList<>();
 
     private final Temperature temperature = new Temperature("France", "2021-12-16",10.25);
 
-
     @GetMapping("/api/temperature")
-    public List<Temperature> getLastDaysTemperature(){
-        return lastDaysTemperature;
+    public Temperature getLastDaysTemperature(){
+        return temperature;
     }
 }

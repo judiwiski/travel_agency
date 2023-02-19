@@ -16,10 +16,6 @@ public class InscriptionController {
     @PostMapping("/api/inscription")
     public void add(@RequestBody Inscription inscription){
         users.add(inscription);
-        System.out.println("user add !");
-        for (Inscription user:users) {
-            System.out.println(user);
-        }
     }
 
     @GetMapping("/api/inscription")
