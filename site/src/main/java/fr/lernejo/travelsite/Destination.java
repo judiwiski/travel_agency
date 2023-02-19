@@ -1,4 +1,4 @@
 package fr.lernejo.travelsite;
 
-public record Destination(String name, float temperature) {
+public record Destination(String name, double temperature) {
 }
