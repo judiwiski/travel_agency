@@ -9,9 +9,9 @@ import java.util.List;
 @RestController
 public class DestinationController {
 
-    public final ArrayList<Destination> destinations = new ArrayList<>();
+    private final ArrayList<Destination> destinations = new ArrayList<>();
 
-    Destination destination = new Destination("France", 150);
+    private final Destination destination = new Destination("France", 150);
 
    @GetMapping("/api/travels")
     public List<Destination> getDestinationList(){

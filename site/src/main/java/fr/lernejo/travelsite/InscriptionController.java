@@ -11,7 +11,6 @@ import java.util.List;
 @RestController
 public class InscriptionController {
     private final ArrayList<Inscription> users = new ArrayList<>();
-    public final ArrayList<Destination> destinations = new ArrayList<>();
 
 
     @PostMapping("/api/inscription")
