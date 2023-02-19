@@ -9,9 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-public class InscriptionController {
-    private final ArrayList<Inscription> users = new ArrayList<>();
-
+public class InscriptionController implements InscriptionInterface{
 
     @PostMapping("/api/inscription")
     public void add(@RequestBody Inscription inscription){

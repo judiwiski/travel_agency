@@ -7,20 +7,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-public class DestinationController {
+public class DestinationController implements DestinationInterface {
 
-    //private final ArrayList<Destination> destinations = new ArrayList<>();
 
     private final Destination destination = new Destination("France", 150);
 
-   /*@GetMapping("/api/travels")
+   @GetMapping("/api/travels")
     public List<Destination> getDestinationList(){
         return destinations;
-    }*/
-
-    @GetMapping("/api/travels")
-    public Destination getDestinationTest(){
-        return destination;
     }
 
 }
