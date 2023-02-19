@@ -11,8 +11,8 @@ import java.util.List;
 @RestController
 public class InscriptionController{
 
-    //private final ArrayList<Inscription> users = new ArrayList<>();
-    private final Inscription user = new Inscription("test@gmail.com", "test", "France", WeatherExpectation.WARMER, 5);
+    private final List<Inscription> users = new ArrayList<>();
+    //private final Inscription user = new Inscription("test@gmail.com", "test", "France", WeatherExpectation.WARMER, 5);
 
     @PostMapping("/api/inscription")
     public void add(@RequestBody Inscription inscription){
@@ -20,7 +20,7 @@ public class InscriptionController{
     }
 
     @GetMapping("/api/inscription")
-    public Inscription getUsers(){
-        return user;
+    public List<Inscription> getUsers(){
+        return users;
     }
 }

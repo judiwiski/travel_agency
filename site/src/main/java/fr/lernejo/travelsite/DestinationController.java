@@ -9,13 +9,13 @@ import java.util.List;
 @RestController
 public class DestinationController{
 
-    //private final ArrayList<Destination> destinations = new ArrayList<>();
+    private final List<Destination> destinations = new ArrayList<>();
 
-    private final Destination destination = new Destination("France", 150);
+    //private final Destination destination = new Destination("France", 150);
 
    @GetMapping("/api/travels")
-    public Destination getDestinationList(){
-        return destination;
+    public List<Destination> getDestinationList(){
+        return destinations;
     }
 
 }
